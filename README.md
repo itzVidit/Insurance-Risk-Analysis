@@ -1,6 +1,6 @@
-# 🚀 Insurance Risk Analysis Model
+# Insurance Risk Analysis Model
 
-## 📌 Overview
+## Overview
 This project focuses on predicting **insurance premium risk categories** using machine learning.  
 The model analyzes user data such as BMI, income, lifestyle, and occupation to classify customers into different insurance risk/premium categories.
 
@@ -11,7 +11,7 @@ The system is built end-to-end with:
 
 ---
 
-## 🧠 Model Details
+## Model Details
 - **Algorithm Used:** Random Forest Classifier  
 - **Problem Type:** Classification  
 - **Target Variable:** `insurance_premium_category`  
@@ -23,14 +23,14 @@ Random Forest is used because:
 
 ---
 
-## ⚙️ Features Used
+## Features Used
 The model uses the following input features:
 
-### 🔢 Numerical Features
+### Numerical Features
 - `bmi`  
 - `income_lpa`  
 
-### 🔤 Categorical Features
+### Categorical Features
 - `age_group`  
 - `lifestyle_risk`  
 - `occupation`  
@@ -38,7 +38,7 @@ The model uses the following input features:
 
 ---
 
-## 🔄 Data Preprocessing
+## Data Preprocessing
 - One-Hot Encoding applied on categorical features  
 - Numerical features passed directly  
 - ColumnTransformer used to combine preprocessing  
@@ -46,33 +46,33 @@ The model uses the following input features:
 
 ---
 
-## 🧰 Tech Stack & Libraries
+## Tech Stack & Libraries
 
-### 🐍 Core Libraries
+### Core Libraries
 - `pandas`
 - `numpy`
 - `scikit-learn`
 
-### ⚙️ ML Components Used
+### ML Components Used
 - `RandomForestClassifier`
 - `Pipeline`
 - `ColumnTransformer`
 - `OneHotEncoder`
 - `train_test_split`
 
-### 💾 Model Storage
+### Model Storage
 - `pickle` for saving trained pipeline (`model.pkl`)
 
-### ⚡ Backend (API)
+### Backend (API)
 - `FastAPI`
 - `uvicorn`
 
-### 🎨 Frontend
+### Frontend
 - `Streamlit`
 
 ---
 
-## 🔌 API Implementation (FastAPI)
+## API Implementation (FastAPI)
 - Built REST API for predictions  
 - Uses Pydantic for input validation  
 - Loads trained `.pkl` model for inference  
@@ -84,7 +84,7 @@ uvicorn main:app --reload
 
 ---
 
-## 💻 Frontend (Streamlit)
+## Frontend (Streamlit)
 - Interactive UI for entering user details  
 - Sends input to FastAPI  
 - Displays predicted insurance category  
@@ -96,7 +96,7 @@ streamlit run frontend.py
 
 ---
 
-## 📈 Model Workflow
+## Model Workflow
 1. User inputs data via Streamlit UI  
 2. Request sent to FastAPI  
 3. Data passes through preprocessing pipeline  
